@@ -27,7 +27,7 @@ SillyTavern 前端在显示头像时，走的是后端的 `/thumbnail?type=avata
 1. 打开 **Extensions** → **Install extension**；
 2. 输入本仓库的 Git URL：
    ```
-   https://github.com/your-username/SillyTavern-AvatarDeblur
+   https://github.com/ZZZa-o/SillyTavern-AvatarDeblur
    ```
 3. 安装完成后刷新页面即可，不需要任何配置。
 
