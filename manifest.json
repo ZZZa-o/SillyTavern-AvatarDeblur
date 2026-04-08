@@ -1,0 +1,12 @@
+{
+    "display_name": "Avatar Deblur",
+    "loading_order": 10,
+    "requires": [],
+    "optional": [],
+    "js": "index.js",
+    "css": "",
+    "author": "ss",
+    "version": "1.0.0",
+    "homePage": "https://github.com/your-username/SillyTavern-AvatarDeblur",
+    "auto_update": true
+}
