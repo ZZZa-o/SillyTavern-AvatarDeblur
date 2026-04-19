@@ -35,25 +35,6 @@ SillyTavern 前端在显示头像时，走的是后端的 `/thumbnail?type=avata
 `SillyTavern/public/scripts/extensions/third-party/SillyTavern-AvatarDeblur/`
 然后刷新浏览器。
 
-## 配合建议
-
-如果你也愿意顺便调整后端，可以进一步把缩图的 `quality` 调高或直接禁用：
-
-```yaml
-thumbnails:
-  enabled: true
-  format: png
-  quality: 100
-  dimensions:
-    bg:
-      - 240
-      - 135
-    avatar:
-      - 864
-      - 1280
-```
-
-但**本扩展单独使用即可完全解决模糊问题**，后端配置纯属可选。
 
 ## 兼容性
 
