@@ -1,6 +1,7 @@
 # SillyTavern Avatar Deblur
 
 彻底解决 SillyTavern 头像 / 背景 / Persona 头像模糊问题的纯前端扩展。
+**插件完全免费分享**
 
 ## 原理
 
