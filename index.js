@@ -60,11 +60,33 @@
         });
     }
 
-    function processImg(img) {
+function processImg(img) {
         const src = img.getAttribute('src');
         if (!src) return;
-        const ns = rewriteUrl(src);
-        if (ns !== src) img.setAttribute('src', ns);
+        
+        let ns = rewriteUrl(src);
+
+        if (typeof ns === 'string') {
+            ns = ns.replace(/\/characters\/\/characters\//g, '/characters/');
+            ns = ns.replace(/\/User(?:%20| )Avatars\/\/User(?:%20| )Avatars\//g, '/User%20Avatars/');
+            ns = ns.replace(/\/backgrounds\/\/backgrounds\//g, '/backgrounds/');
+        }
+
+        if (ns !== src) {
+            img.setAttribute('src', ns);
+        }
+
+        const zoomUrl = img.getAttribute('data-izoomify-url');
+        if (zoomUrl) {
+            let newZoomUrl = zoomUrl
+                .replace(/\/characters\/\/characters\//g, '/characters/')
+                .replace(/\/User(?:%20| )Avatars\/\/User(?:%20| )Avatars\//g, '/User%20Avatars/')
+                .replace(/\/backgrounds\/\/backgrounds\//g, '/backgrounds/');
+                
+            if (newZoomUrl !== zoomUrl) {
+                img.setAttribute('data-izoomify-url', newZoomUrl);
+            }
+        }
     }
 
     function processBg(el) {
